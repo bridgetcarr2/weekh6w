@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weeksix</title>
+    <script src="week6hw.js"></script>
+    <link rel="stylesheet" href="week6hw.css">   
+</head>
+<body>
+    <!--This is where list will appear-->
+    <div id="test"></div>
+    
+    <script>
+        var arrFlower = [];
+
+            //This prompts the user for 4 flowers.
+            //You could ask the for how many flowers they would like to answer
+
+        for (var i=0; i<4; i++){
+            //this adds the flowers the user entered in Javascript prompt to the array
+            arrFlower.push(prompt("Enter a Flower: ", ""));
+        }
+         //sorts the flowers alphabetically 
+        arrFlower.sort();
+
+        //loop through the contents of the array and display them on div 
+        for(var i=0; i<arrFlower.length; i++){
+            document.getElementById("test").innerHTML += arrFlower[i] + "<BR>";
+        }
+        //clear the flowers from the div
+        function clearList(){
+            document.getElementById("test").innerHTML = "";
+        }
+    </script>
+
+    <!--Added a reset button-->
+    <input type="button" value="reset" onclick="clearList();">
+
+    <!--Added buttons here in order to change between 3 different background photos-->
+        <div>
+            <button id="btn-1">1</button>
+            <button id="btn-2">2</button>
+            <button id="btn-3">3</button> 
+        </div>
+
+</body>
+</html>
